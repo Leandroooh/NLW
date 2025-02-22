@@ -11,6 +11,8 @@ import { fastifySwagger } from '@fastify/swagger';
 import { fastifySwaggerUi } from '@fastify/swagger-ui';
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route';
 import { env } from './env';
+import { accessInviteLinkRoute } from './routes/access-invite-link-route';
+import { getSubscriberInviteClicksRoute } from './routes/get-subscribe-invite-clicks-route';
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -35,6 +37,8 @@ app.register(fastifySwaggerUi, {
 
 // subscribe-to-event-rote.ts
 app.register(subscribeToEventRoute);
+app.register(accessInviteLinkRoute);
+app.register(getSubscriberInviteClicksRoute);
 
 app.setSerializerCompiler(serializerCompiler);
 app.setValidatorCompiler(validatorCompiler);

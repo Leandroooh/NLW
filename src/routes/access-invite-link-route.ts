@@ -4,7 +4,7 @@ import { env } from '../env';
 import { accessInviteLink } from '../functions/access-invite-link';
 import { redis } from '../redis/client';
 
-export const acessInviteRoute: FastifyPluginAsyncZod = async app => {
+export const accessInviteLinkRoute: FastifyPluginAsyncZod = async app => {
   app.get(
     '/invites/:subscriberId',
     {
@@ -15,9 +15,7 @@ export const acessInviteRoute: FastifyPluginAsyncZod = async app => {
         }),
         //  Serialização das Informações [ Status: 201]
         response: {
-          301: z.object({
-            subscriberId: z.string(),
-          }),
+          302: z.null(),
         },
       },
     },

@@ -13,4 +13,8 @@ export async function accessInviteLink({
   } catch (error) {
     console.error('Erro ao acessar o link do convite:', error);
   }
+
+  if (!subscriberId) {
+    throw new Error('subscriberId não pode ser vazio.');
+  }
 }
