@@ -2,7 +2,7 @@ POST http://localhost:3333/subscriptions
 Content-Type: application/json
 
 {
-    "name": "Leandro Silva",
+    "name": "Leandro",
     "email": "Leandros@gmail.com"
 }
 
@@ -12,4 +12,4 @@ Content-Type: application/json
 GET http://localhost:3333/invites/leandro123
 
 ###
-GET http://localhost:3333/invites/leandro123/ranking/clicks
+GET http://localhost:3333/subscribers/a97d3823-f616-42fe-aba5-67cc5ce6a7ad/ranking/clicks

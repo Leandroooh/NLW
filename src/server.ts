@@ -12,7 +12,7 @@ import { fastifySwaggerUi } from '@fastify/swagger-ui';
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route';
 import { env } from './env';
 import { accessInviteLinkRoute } from './routes/access-invite-link-route';
-import { getSubscriberInviteClicksRoute } from './routes/get-subscribe-invite-clicks-route';
+import { getSubscriberInviteClicksRoute } from './routes/get-subscribe-invite-count-route';
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
