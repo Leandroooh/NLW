@@ -2,9 +2,9 @@ POST http://localhost:3333/subscriptions
 Content-Type: application/json
 
 {
-    "name": "leandro123123",
-    "email": "Indicado2@gmail.com",
-    "referrer": "Leandro123"
+  "name": "convidado2",
+  "email": "convite2@convidado.com.br",
+  "referrer": "642188ef-92b8-44a5-a266-9b2e7041cd15"
 }
 
 
@@ -14,3 +14,13 @@ GET http://localhost:3333/invites/leandro123
 
 ###
 GET http://localhost:3333/subscribers/leandro123/ranking/clicks
+
+###
+GET http://localhost:3333/subscribers/642188ef-92b8-44a5-a266-9b2e7041cd15/ranking/count
+
+###
+GET http://localhost:3333/ranking
+
+#
+# ADM: 642188ef-92b8-44a5-a266-9b2e7041cd15
+#

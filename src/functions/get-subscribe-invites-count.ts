@@ -7,7 +7,7 @@ interface getSubscribeInviteCountParams {
 export async function getSubscribeInviteCount({
   subscriberId,
 }: getSubscribeInviteCountParams) {
-  const count = await redis.zscore('referral:ranking', subscriberId);
+  const invites = await redis.zscore('referral:ranking', subscriberId);
 
-  return { count: count ? Number.parseInt(count) : 0 };
+  return { count: invites ? Number.parseInt(invites) : 0 };
 }

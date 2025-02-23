@@ -7,7 +7,7 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "build": "tsup-node",
-    "start": "node dist/server.mjs"
+    "start": "node --env-file .env dist/server.mjs"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/node": "^22.13.4",
     "redis-cli": "^2.1.2",
+    "tsup": "^8.3.6",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   }

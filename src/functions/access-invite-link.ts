@@ -1,20 +1,11 @@
 import { redis } from '../redis/client';
 
-interface accessInviteLinkParams {
+interface AccessInviteLinkParams {
   subscriberId: string;
 }
 
 export async function accessInviteLink({
   subscriberId,
-}: accessInviteLinkParams) {
-  try {
-    // Incrementa o contador de acessos para o subscriberId
-    await redis.hincrby('referral:access-count', subscriberId, 1);
-  } catch (error) {
-    console.error('Erro ao acessar o link do convite:', error);
-  }
-
-  if (!subscriberId) {
-    throw new Error('subscriberId não pode ser vazio.');
-  }
+}: AccessInviteLinkParams) {
+  await redis.hincrby('referral:access-count', subscriberId, 1);
 }
