@@ -2,8 +2,9 @@ POST http://localhost:3333/subscriptions
 Content-Type: application/json
 
 {
-    "name": "Leandro",
-    "email": "Leandros@gmail.com"
+    "name": "leandro123123",
+    "email": "Indicado2@gmail.com",
+    "referrer": "Leandro123"
 }
 
 
@@ -12,4 +13,4 @@ Content-Type: application/json
 GET http://localhost:3333/invites/leandro123
 
 ###
-GET http://localhost:3333/subscribers/a97d3823-f616-42fe-aba5-67cc5ce6a7ad/ranking/clicks
+GET http://localhost:3333/subscribers/leandro123/ranking/clicks
